@@ -3,17 +3,67 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const navLinks = <React.Fragment>
-                <li>
-                <Link to="" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</Link>
-                </li>
-                <li>
-                <Link to="" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</Link>
-                </li>
-                <li>
-                <Link to="" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</Link>
-                </li>
-                    </React.Fragment>
+  const navLinks = <React.Fragment>
+  <li>
+  <Link to="" className='' >HOME</Link>
+  </li>
+  <li tabIndex={0} >
+  <Link className="justify-between ">ABOUT US</Link>
+    <ul className="p-2 -left-64 lg:left-0 w-64 bg-base-200"> 
+<li><Link to="" >Message from Chairman</Link></li>
+<li><Link to="" >Message from Principal</Link></li>
+<li><Link to="" >Governing Body</Link></li>
+<li><Link to="" >Master Plan</Link></li>
+<li><Link to="" >History</Link></li>
+<li><Link to="" >Vision and Objectives</Link></li>
+<li><Link to="" >Infrastructure</Link></li>
+</ul>
+  </li>
+  <li tabIndex={0} className="">
+  <Link className="justify-between">ACADEMIC</Link>
+    <ul className="p-2 -left-64 lg:left-0 w-64 bg-base-200"> 
+<li><Link to="" >Code of Conducts</Link></li>
+<li><Link to="" >Guideline for Parents</Link></li>
+<li><Link to="" >Dress Code</Link></li>
+<li className='w-full'><Link to="" className='w-full'>HomeWork A Class <br /> Lecture Documents</Link></li>
+<li><Link to="" >Lesson Plan</Link></li>
+<li><Link to="" >Academic Calendar</Link></li>
+<li><Link to="" >Syllabus</Link></li>
+<li><Link to="" >Class Routine</Link></li>
+<li><Link to="" >Co-curricular Activities</Link></li>
+</ul>
+  </li>
+  <li tabIndex={0} className="">
+  <Link className="justify-between">INFORMATION</Link>
+    <ul className="p-2 -left-64 lg:left-0 w-64 bg-base-200"> 
+<li><Link to="" >Notice Board</Link></li>
+<li><Link to="" >Payment Procedure</Link></li>
+<li><Link to="" >Facilities</Link></li>
+<li><Link to="" >News and Events</Link></li>
+<li><Link to="" >Our Achievements</Link></li>
+<li><Link to="" >List Of Holidays</Link></li>
+<li><Link to="" >Teachers Info</Link></li>
+<li><Link to="" >Student Info</Link></li>
+</ul>
+  </li>
+  
+  <li>
+  <Link to="" >ADMISSION</Link>
+  </li>
+  <li>
+  <Link to="" >CAMPUS LIFE</Link>
+  </li>
+  <li>
+  <Link to="" >EMPLOYMENT</Link>
+  </li>
+  <li>
+  <Link to="" >CONTACT</Link>
+  </li>
+  <li className=''>
+  <Link to="" >স্বাধীনতার সুবর্ণ জয়ন্তী কর্নার</Link>
+  </li>
+    
+</React.Fragment>
 
     return (
         
@@ -23,40 +73,20 @@ const Navbar = () => {
   </div>
   <div className="navbar-end mr-5">
     <div className="dropdown">
-      <label tabIndex={0} className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      <label tabIndex={0} className="btn btn-ghost  swap swap-rotate lg:hidden">
+  
+  <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+  
       </label>
-      <ul tabIndex={0} className="menu flex-wrap-reverse menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li><Link to=''>Item 1</Link></li>
-        <li tabIndex={0}>
-          <Link to='' className="justify-start">
-            Parent
-            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/></svg>
-          </Link>
-          <ul className="p-2">
-            <li><Link to=''>Submenu 1</Link></li>
-            <li><Link to=''>Submenu 2</Link></li>
-          </ul>
-        </li>
-        <li><Link to=''>Item 3</Link></li>
+      <ul tabIndex={0} className="menu right-0 flex-wrap menu-compact dropdown-content mt-3 shadow bg-base-100 rounded-box w-56 -right-0">
+        {navLinks}
       </ul>
     </div>
   </div>
   
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><Link to=''>Item 1</Link></li>
-      <li tabIndex={0}>
-        <Link to=''>
-          Parent
-          <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </Link>
-        <ul className="p-2">
-          <li><Link to=''>Submenu 1</Link></li>
-          <li><Link to=''>Submenu 2</Link></li>
-        </ul>
-      </li>
-      <li><Link to=''>Item 3</Link></li>
+    <ul className="menu menu-horizontal">
+      {navLinks}
     </ul>
   </div>
 </div>
